@@ -4,12 +4,10 @@ import LoginPage from './pages/LoginPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 
 const App = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<ChatPage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
-  </BrowserRouter>
+  <Routes>
+    <Route path="/" element={<ChatPage />} />
+    <Route path="/login" element={<LoginPage />} />
+    <Route path="*" element={<NotFoundPage />} />
+  </Routes>
 );
 export default App;
