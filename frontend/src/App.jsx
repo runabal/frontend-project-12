@@ -5,9 +5,16 @@ import NotFoundPage from './pages/NotFoundPage.jsx';
 
 const App = () => (
   <Routes>
-    <Route path="/" element={<ChatPage />} />
     <Route path="/login" element={<LoginPage />} />
+
+    <Route element={<RequireAuth />}>
+      <Route path="/" element={<ChatPage />} />
+    </Route>
+
+    <Route path="*" element={<Navigate to="/" replace />} />
     <Route path="*" element={<NotFoundPage />} />
   </Routes>
 );
+
 export default App;
+
